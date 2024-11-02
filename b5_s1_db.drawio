@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.3">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="C-vyLk0tnHw3VtMMgP7b-12" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERzeroToMany;startArrow=ERone;endFill=1;startFill=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="700" y="165" as="sourcePoint" />
+            <mxPoint x="700" y="355" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z-4ecegSnn4j5qDgChqS-1" value="Customer" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="190" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="z-4ecegSnn4j5qDgChqS-2" value="+Mã KH (PK)&lt;br&gt;+Tên&lt;br&gt;+ĐC&lt;div&gt;+ SĐT&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="z-4ecegSnn4j5qDgChqS-1">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="z-4ecegSnn4j5qDgChqS-3" value="Rental" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="320" width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="z-4ecegSnn4j5qDgChqS-4" value="+Mã thuê (PK)&lt;br&gt;+Mã KH (FK)&lt;br&gt;+Mã xe (FK)&lt;div&gt;+Ngày BĐ&lt;/div&gt;&lt;div&gt;+Ngày hạn&lt;/div&gt;&lt;div&gt;+Tổng tiền&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="z-4ecegSnn4j5qDgChqS-3">
+          <mxGeometry y="50" width="170" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="z-4ecegSnn4j5qDgChqS-5" value="Car" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="480" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="z-4ecegSnn4j5qDgChqS-6" value="+Mã xe (PK)&lt;div&gt;+Tên xe&lt;br&gt;+Loại xe&lt;br&gt;+Giá thuê mỗi ngày&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="z-4ecegSnn4j5qDgChqS-5">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="z-4ecegSnn4j5qDgChqS-8" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERoneToMany;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="z-4ecegSnn4j5qDgChqS-5" target="z-4ecegSnn4j5qDgChqS-2">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="220" y="450" as="sourcePoint" />
+            <mxPoint x="320" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z-4ecegSnn4j5qDgChqS-9" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERzeroToOne;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.547;entryY=1.027;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="z-4ecegSnn4j5qDgChqS-6" target="z-4ecegSnn4j5qDgChqS-4">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="220" y="450" as="sourcePoint" />
+            <mxPoint x="320" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z-4ecegSnn4j5qDgChqS-10" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERzeroToOne;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.006;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="z-4ecegSnn4j5qDgChqS-2" target="z-4ecegSnn4j5qDgChqS-4">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="220" y="450" as="sourcePoint" />
+            <mxPoint x="320" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z-4ecegSnn4j5qDgChqS-11" value="=&amp;gt; Để tính giá thuê : thực thể rental bao gồm các thuộc tính khóa ngoại được tham chiếu từ các khóa chính của thực thể&amp;nbsp; KH và Car ," style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-55" y="648" width="730" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z-4ecegSnn4j5qDgChqS-13" value="để xác định người thuê và chính xác thông tin về xe cần thuê&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="678" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="z-4ecegSnn4j5qDgChqS-15" value="+ Từ đó xác định được giá thuê mỗi ngày của xe đó và tổng giá thuê = (ngày hạn - ngày kết thúc + 1) x giá thuê mỗi ngày" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-55" y="720" width="670" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

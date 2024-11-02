@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.3">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vjXQgWRjbioo17vOLkk--1" value="Reservation" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="320" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="vjXQgWRjbioo17vOLkk--2" value="+Mã đặt phòng (PK)&lt;br&gt;+Mã KH (FK)&lt;br&gt;+Mã phòng (FK)&lt;div&gt;+Ngày BĐ&lt;/div&gt;&lt;div&gt;+Ngày KT&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="vjXQgWRjbioo17vOLkk--1">
+          <mxGeometry y="50" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="vjXQgWRjbioo17vOLkk--14" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERzeroToOne;rounded=0;entryX=0.465;entryY=1.056;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.544;exitY=0.008;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="vjXQgWRjbioo17vOLkk--1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="79.99999999999994" y="295.9200000000001" as="sourcePoint" />
+            <mxPoint x="67.00999999999993" y="139.99999999999994" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vjXQgWRjbioo17vOLkk--3" value="ServiceUsage" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="490" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vjXQgWRjbioo17vOLkk--4" value="+Mã sử dụng DV (PK)&lt;br&gt;+Mã đặt phòng (FK)&lt;br&gt;+Mã DV (FK)&lt;div&gt;+Ngày SD&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="vjXQgWRjbioo17vOLkk--3">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="vjXQgWRjbioo17vOLkk--5" value="Service" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="265" y="620" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vjXQgWRjbioo17vOLkk--6" value="+Mã DV (PK)&lt;br&gt;+Tên DV&lt;br&gt;+Giá DV" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="vjXQgWRjbioo17vOLkk--5">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="vjXQgWRjbioo17vOLkk--7" value="Room" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="110" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vjXQgWRjbioo17vOLkk--8" value="+Mã phòng (PK)&lt;br&gt;+Loại phòng&lt;br&gt;+Giá mỗi đêm" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="vjXQgWRjbioo17vOLkk--7">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="vjXQgWRjbioo17vOLkk--9" value="Guest" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vjXQgWRjbioo17vOLkk--10" value="+Mã KH (PK)&lt;div&gt;+Tên&lt;br&gt;+ĐC&lt;br&gt;+Email&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="vjXQgWRjbioo17vOLkk--9">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="vjXQgWRjbioo17vOLkk--11" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERzeroToOne;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.447;entryY=-0.014;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="vjXQgWRjbioo17vOLkk--10" target="vjXQgWRjbioo17vOLkk--1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="210" y="320" as="sourcePoint" />
+            <mxPoint x="310" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vjXQgWRjbioo17vOLkk--12" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERzeroToOne;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.612;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="vjXQgWRjbioo17vOLkk--8" target="vjXQgWRjbioo17vOLkk--1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="280" y="450" as="sourcePoint" />
+            <mxPoint x="380" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vjXQgWRjbioo17vOLkk--13" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERzeroToOne;rounded=0;entryX=0.988;entryY=0.344;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="vjXQgWRjbioo17vOLkk--3" target="vjXQgWRjbioo17vOLkk--2">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="350" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
