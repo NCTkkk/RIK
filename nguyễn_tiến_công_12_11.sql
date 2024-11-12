@@ -108,14 +108,28 @@ WHERE c.id =1;
 
 
 -- Tìm tên và địa chỉ liên lạc của các chủ thầu (contractor) thi công công trình ở Cần Thơ (building) do kiến trúc sư Lê Kim Dung thiết kế (architect, design)
-SELECT * FROM architect;
-
 SELECT c.`name` AS `chủ thầu`,  c.address AS `địa chỉ chủ thầu`, a.`name` AS `kiến trúc sư`
 FROM building b
 INNER JOIN design d ON d.building_id = b.id
 INNER JOIN architect a ON d.architect_id = a.id
 INNER JOIN contractor c ON b.contractor_id = c.id
 WHERE b.city= 'can tho' AND a.id=2;
+
+
+-- Hãy cho biết nơi tốt nghiệp của các kiến trúc sư (architect) đã thiết kế (design) công trình Khách Sạn Quốc Tế ở Cần Thơ (building)
+SELECT * FROM building;
+SELECT * FROM architect;
+
+SELECT a.`name` AS `kiến trúc sư`, a.place AS `nơi tốt nghiệp`, b.fname AS `công trình`
+FROM building b
+INNER JOIN design d ON d.building_id = b.id
+INNER JOIN architect a ON d.architect_id = a.id
+WHERE b.fname = 'khach san quoc te' AND b.city = 'can tho';
+
+
+
+
+
 
 
 
