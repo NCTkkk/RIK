@@ -287,6 +287,89 @@ GROUP BY city;
 
 
 -- EX6
+CREATE TABLE department(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nameDP VARCHAR(100) UNIQUE
+);
+
+CREATE TABLE nv (
+    nv_id INT PRIMARY KEY AUTO_INCREMENT,
+    nameNV VARCHAR(45),
+    age INT,
+    salary FLOAT
+);
+
+CREATE TABLE nv_department (
+    nv_id INT,
+    dp_id INT,
+    FOREIGN KEY (nv_id) REFERENCES nv(nv_id),
+    FOREIGN KEY (dp_id) REFERENCES department(id),
+    PRIMARY KEY (nv_id, dp_id)
+);
+
+
+INSERT INTO department (nameDP) VALUES ('HR'), ('Engineering'), ('Marketing'), ('Sales'),('Accounting');
+
+
+INSERT INTO nv (nameNV, age, salary) VALUES ('Nguyen Van A', 30, 5000.00), 
+                                             ('Tran Thi B', 28, 4500.00),
+                                             ('Le Van C', 35, 7000.00),
+                                             ('Pham Thi D', 40, 7500.00),
+                                             ('Hoang Van E', 26, 4000.00);
+
+
+INSERT INTO nv_department (nv_id, dp_id) VALUES 
+    (1, 1), (1, 2), 
+    (2, 3),        
+    (3, 4),         
+    (4, 2), (4, 5), 
+    (5, 1);         
+
+--  liệt kê tất cả các nhân viên trong bộ phận có tên là "Kế toán". Kết quả cần hiển thị mã nhân viên và tên nhân viên
+SELECT nv.nv_id, nv.nameNV, d.nameDP
+FROM nv 
+JOIN nv_department nd ON nd.nv_id = nv.nv_id
+JOIN department d ON d.id = nd.dp_id
+WHERE d.nameDP = 'Accounting';
+
+-- tìm các nhân viên có mức lương lớn hơn 50,000. Kết quả trả về cần bao gồm mã nhân viên, tên nhân viên và mức lương
+SELECT nv_id, nameNV, salary
+FROM nv
+WHERE salary > 5000.00;
+
+-- hiển thị tất cả các bộ phận và số lượng nhân viên trong từng bộ phận. Kết quả trả về cần bao gồm tên bộ phận và số lượng nhân viên
+SELECT nd.dp_id, d.nameDP, COUNT(nd.nv_id)
+FROM nv_department nd
+JOIN department d ON d.id = nd.dp_id
+JOIN nv ON nv.nv_id =  nd.nv_id
+GROUP BY nd.dp_id;
+
+
+
+-- tìm ra các thành viên có mức lương cao nhất theo từng bộ phận. Kết quả trả về là một danh sách theo bất cứ thứ tự nào. Nếu có nhiều nhân viên bằng lương nhau nhưng cũng là mức lương cao nhất thì hiển thị tất cả những nhân viên đó ra.
+-- Viết câu lệnh SQL để tìm các bộ phận có tổng mức lương của nhân viên vượt quá 100,000 (hoặc một mức tùy chọn khác). Kết quả trả về bao gồm tên bộ phận và tổng mức lương của bộ phận đó
+SELECT d.id,d.nameDP, SUM(nv.salary) AS total_salary
+FROM department d
+JOIN nv_department nd ON nd.dp_id = d.id
+JOIN nv ON nv.nv_id = nd.nv_id
+GROUP BY d.id
+HAVING total_salary > 10000.00;
+
+
+--  liệt kê tất cả các nhân viên làm việc trong hơn 2 bộ phận khác nhau. Kết quả cần hiển thị mã nhân viên, tên nhân viên và số lượng bộ phận mà họ tham gia.
+SELECT nv.nv_id, nv.nameNV, COUNT(d.id) AS quantity_dp
+FROM nv
+JOIN nv_department nd ON nd.nv_id = nv.nv_id
+JOIN department d ON d.id = nd.dp_id
+GROUP BY nv.nv_id
+HAVING quantity_dp >=2;
+
+
+
+
+
+
+
 
 
 
